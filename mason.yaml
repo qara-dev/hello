@@ -1,0 +1,7 @@
+bricks:
+  bloc_layered:
+    path: "bricks\\bloc_layered"
+  clean_bloc:
+    path: "bricks\\clean_bloc"
+  bloc:
+    path: "bricks\\bloc"
