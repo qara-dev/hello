@@ -10,7 +10,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i2;
-import 'package:fm_template/features/profile/presentation/pages/profile_page.dart'
+import 'package:hello/features/profile/presentation/pages/profile_page.dart'
     as _i1;
 
 /// generated route for

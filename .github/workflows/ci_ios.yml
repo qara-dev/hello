@@ -1,0 +1,49 @@
+name: CI IOS
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  integration_test_ios:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        include:
+          - device: "iPhone 15 Pro Max"
+          - device: "iPad Pro (12.9-inch) (6th generation)"
+      fail-fast: true
+    steps:
+      - name: "Available Devices"
+        run: xcrun simctl list --json devices available
+
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.29.0"
+          channel: stable
+      - run: flutter doctor -v
+
+      - run: dart pub global activate flutterfire_cli
+
+      - name: "Melos Install"
+        run: dart pub global activate melos
+
+      - name: "Melos bs"
+        run: melos bootstrap
+
+      - uses: futureware-tech/simulator-action@v2
+        with:
+          model: ${{ matrix.device }}
+          os_version: "17.2"
+
+      - name: Integration Test
+        run: melos integration-test
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ${{ matrix.device }}
+          path: ./screenshots/*

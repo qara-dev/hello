@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fm_template/core/di/injection.dart';
-import 'package:fm_template/core/localization/generated/app_localization.dart';
-import 'package:fm_template/core/routes/routes.dart';
-import 'package:fm_template/features/profile/presentation/bloc/profile_bloc.dart';
+import 'package:hello/core/di/injection.dart';
+import 'package:hello/core/localization/generated/app_localization.dart';
+import 'package:hello/core/routes/routes.dart';
+import 'package:hello/features/profile/presentation/bloc/profile_bloc.dart';
 
 import 'bloc/app_bloc.dart';
 

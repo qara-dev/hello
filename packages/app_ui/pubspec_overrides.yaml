@@ -1,0 +1,6 @@
+# melos_managed_dependency_overrides: rest_client,storage
+dependency_overrides:
+  rest_client:
+    path: ..\\rest_client
+  storage:
+    path: ..\\storage

@@ -11,19 +11,19 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:app_ui/app_ui.dart' as _i768;
 import 'package:dio/dio.dart' as _i361;
-import 'package:fm_template/app/bloc/app_bloc.dart' as _i761;
-import 'package:fm_template/core/di/di_module.dart' as _i241;
-import 'package:fm_template/features/profile/data/data_sources/profile_remote_data_source.dart'
+import 'package:hello/app/bloc/app_bloc.dart' as _i761;
+import 'package:hello/core/di/di_module.dart' as _i241;
+import 'package:hello/features/profile/data/data_sources/profile_remote_data_source.dart'
     as _i49;
-import 'package:fm_template/features/profile/data/data_sources/profile_remote_data_source_impl.dart'
+import 'package:hello/features/profile/data/data_sources/profile_remote_data_source_impl.dart'
     as _i664;
-import 'package:fm_template/features/profile/data/repositories/profile_repository_impl.dart'
+import 'package:hello/features/profile/data/repositories/profile_repository_impl.dart'
     as _i577;
-import 'package:fm_template/features/profile/domain/repositories/profile_repository.dart'
+import 'package:hello/features/profile/domain/repositories/profile_repository.dart'
     as _i507;
-import 'package:fm_template/features/profile/domain/usecases/get_profile.dart'
+import 'package:hello/features/profile/domain/usecases/get_profile.dart'
     as _i553;
-import 'package:fm_template/features/profile/presentation/bloc/profile_bloc.dart'
+import 'package:hello/features/profile/presentation/bloc/profile_bloc.dart'
     as _i134;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;

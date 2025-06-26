@@ -1,4 +1,4 @@
-name: fm_template_root
+name: hello_root
 
 packages:
   - app

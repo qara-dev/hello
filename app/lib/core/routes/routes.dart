@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:fm_template/core/routes/routes.gr.dart';
+import 'package:hello/core/routes/routes.gr.dart';
 
 @AutoRouterConfig()
 class AppRouter extends RootStackRouter {

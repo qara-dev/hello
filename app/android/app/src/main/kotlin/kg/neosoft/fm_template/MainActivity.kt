@@ -1,4 +1,4 @@
-package kg.neosoft.fm_template
+package kg.neosoft.hello
 
 import io.flutter.embedding.android.FlutterActivity
 

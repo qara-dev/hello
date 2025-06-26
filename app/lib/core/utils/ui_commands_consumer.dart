@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fm_template/core/utils/commands_bloc.dart';
+import 'package:hello/core/utils/commands_bloc.dart';
 
 class UiCommandsConsumer<
   BlocT extends UiCommandsBase<CommandT>,

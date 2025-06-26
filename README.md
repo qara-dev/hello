@@ -1,4 +1,4 @@
-# fm_template
+# hello
 
 This repository is a monorepo Flutter project template using FVM, Melos, and Mason for scalable development.
 

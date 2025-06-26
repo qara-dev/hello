@@ -1,0 +1,41 @@
+name: Analyze code and Unit test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  flutter_test:
+    name: Analyze code and Unit test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.29.0"
+          channel: "stable"
+      - run: flutter doctor
+
+      - run: dart pub global activate flutterfire_cli
+
+      - name: "Melos Install"
+        run: dart pub global activate melos
+
+      - name: "Melos bs"
+        run: melos bootstrap
+
+      - name: "Check fmt"
+        run: melos format-check
+
+      - name: "Analyze Code"
+        run: melos analyze-check
+
+      - name: "Run unit tests"
+        run: melos unit-test
+
+      - name: "Run the build_runner and return an error if files are changed"
+        run: |
+          melos run run-build-runner
+          git diff --exit-code -- ':!**/*.gen.dart'
